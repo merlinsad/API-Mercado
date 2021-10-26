@@ -1,0 +1,43 @@
+
+//Buscar todos os Fornecedores
+GET http://localhost/fornecedores HTTP/1.1
+Content-Type: application/json
+
+###
+
+//Buscar Fornecedores pelo ID
+GET http://localhost/fornecedores HTTP/1.1
+Content-Type: application/json
+//Para realizar a busca de Fornecedor, basta apenas inserir o ID do mesmo ao lado de "/Fornecedores/1", sendo o 1, onde deverá estar inserido o ID.
+
+###
+//Inserir Fornecedores no sistema
+POST http://localhost/fornecedores HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_fornecedor": ,            //<------ Inserir ID do Fornecedor.
+    "nome_fornecedor": "",        //<------ Inserir nome do Fornecedor.
+    "email_fornecedor": ,         //<------ Inserir email do Fornecedor.
+    "telefone_fornecedor": "",    //<------ Inserir telefone do Fornecedor.
+    "produto_fornecedor": ,       //<------ Inserir Rank do Fornecedor.
+}
+
+###
+//Atualizar um Fornecedor no sistema
+PUT http://localhost/fornecedores/1 HTTP/1.1
+Content-Type: application/json
+
+{   //Para realizar alteração em Fornecedor, basta apenas inserir o ID do mesmo ao lado de "/Fornecedores/1", sendo o 1, onde deverá estar inserido o ID.
+    "nome_fornecedor": "",        //<------ Inserir ID do Fornecedor.
+    "email_fornecedor": ,         //<------ Inserir nome do Fornecedor.
+    "telefone_fornecedor": "",    //<------ Inserir email do Fornecedor.
+    "produto_fornecedor": ,       //<------ Inserir Produto do Fornecedor.
+}
+
+###
+
+//Deletar um Fornecedor no sistema
+DELETE http://localhost/fornecedores/1 HTTP/1.1
+Content-Type: application/json
+//Para realizar a remoção de um Fornecedor, basta apenas inserir o ID do mesmo ao lado de "/Fornecedores/1", sendo o 1, onde deverá estar inserido o ID.

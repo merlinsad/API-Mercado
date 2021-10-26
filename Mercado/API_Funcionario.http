@@ -1,0 +1,43 @@
+
+//Buscar todos os Funcionários
+GET http://localhost/funcionarios HTTP/1.1
+Content-Type: application/json
+
+###
+
+//Buscar Funcionários pelo ID
+GET http://localhost/funcionarios HTTP/1.1
+Content-Type: application/json
+//Para realizar a busca de Funcionário, basta apenas inserir o ID do mesmo ao lado de "/Funcionarios/1", sendo o 1, onde deverá estar inserido o ID.
+
+###
+//Inserir Funcionários no sistema
+POST http://localhost/funcionarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_funcionario": ,            //<------ Inserir ID do Funcionário.
+    "nome_funcionario": "",        //<------ Inserir nome do Funcionário.
+    "cargo_funcionario": ,         //<------ Inserir Cargo do Funcionário.
+    "setor_funcionario": "",       //<------ Inserir Setor do Funcionário.
+    "salario_funcionario": ,       //<------ Inserir Salário do Funcionário.
+}
+
+###
+//Atualizar um Funcionário no sistema
+PUT http://localhost/funcionarios/1 HTTP/1.1
+Content-Type: application/json
+
+{   //Para realizar alteração em Funcionário, basta apenas inserir o ID do mesmo ao lado de "/Funcionarios/1", sendo o 1, onde deverá estar inserido o ID.
+    "nome_funcionario": "",        //<------ Inserir nome do Funcionário.
+    "cargo_funcionario": ,         //<------ Inserir Cargo do Funcionário.
+    "setor_funcionario": "",       //<------ Inserir Setor do Funcionário.
+    "salario_funcionario": ,       //<------ Inserir Salário do Funcionário.
+}
+
+###
+
+//Deletar um Funcionário no sistema
+DELETE http://localhost/funcionarios/1 HTTP/1.1
+Content-Type: application/json
+//Para realizar a remoção de um Funcionário, basta apenas inserir o ID do mesmo ao lado de "/Fornecedores/1", sendo o 1, onde deverá estar inserido o ID.

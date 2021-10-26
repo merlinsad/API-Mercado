@@ -1,0 +1,43 @@
+
+//Buscar todos os produtos
+GET http://localhost/produtos HTTP/1.1
+Content-Type: application/json
+
+###
+
+//Buscar produto pelo ID
+GET http://localhost/produtos HTTP/1.1
+Content-Type: application/json
+//Para realizar a busca de determinado produto, basta apenas inserir o ID do mesmo ao lado de "/produtos/1", sendo o 1, onde deverá estar inserido o ID.
+
+###
+//Inserir produto no sistema
+POST http://localhost/produtos HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_produto": ,      //<------ Inserir ID do produto
+    "nome_produto": "",  //<------ Inserir nome do produto.
+    "preco_produto": ,   //<------ Inserir valor do produto
+    "setor_produto": "", //<------ Inserir setor do produto. Ex.: Limpeza, Mercearia, Bazar e etc....
+    "estoque_produto": , //<------ Inserir volume atual do estoque
+}
+
+###
+//Atualizar um produto no sistema
+PUT http://localhost/produtos/1 HTTP/1.1
+Content-Type: application/json
+
+{   //Para realizar alteração em um determinado produto, basta apenas inserir o ID do mesmo ao lado de "/produtos/1", sendo o 1, onde deverá estar inserido o ID.
+    "nome_produto": "",  //<------ Inserir nome do produto.
+    "preco_produto": ,   //<------ Inserir valor do produto
+    "setor_produto": "", //<------ Inserir setor do produto. Ex.: Limpeza, Mercearia, Bazar e etc....
+    "estoque_produto": , //<------ Inserir volume atual do estoque
+}
+
+###
+
+//Deletar um produto no sistema
+DELETE http://localhost/produtos/1 HTTP/1.1
+Content-Type: application/json
+//Para realizar a remoção de determinado produto, basta apenas inserir o ID do mesmo ao lado de "/produtos/1", sendo o 1, onde deverá estar inserido o ID.

@@ -1,0 +1,44 @@
+
+//Buscar todos os produtos
+GET http://localhost/assinante HTTP/1.1
+Content-Type: application/json
+
+###
+
+//Buscar produto pelo ID ou Nome
+GET http://localhost/assinante HTTP/1.1
+Content-Type: application/json
+//Para realizar a busca de Assinante, basta apenas inserir o ID do mesmo ao lado de "/Assinante/1", sendo o 1, onde deverá estar inserido o ID, ou
+//Em caso de busca por nome, apenas inserir o nome da pessoa no lugar do ID, sendo possível, tanto pelo ID quanto pelo nome.
+
+###
+//Inserir produto no sistema
+POST http://localhost/assinante HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_assinante": ,         //<------ Inserir ID do Assinante.
+    "nome_assinante": "",     //<------ Inserir nome do Assinante.
+    "email_assinante": ,      //<------ Inserir email do Assinante.
+    "telefone_assinante": "", //<------ Inserir telefone do Assinante.
+    "rank_assinante": ,       //<------ Inserir Rank do Assinante.
+}
+
+###
+//Atualizar um produto no sistema
+PUT http://localhost/assinante/1 HTTP/1.1
+Content-Type: application/json
+
+{   //Para realizar alteração em Assinante, basta apenas inserir o ID do mesmo ao lado de "/Assinante/1", sendo o 1, onde deverá estar inserido o ID.
+    "nome_assinante": "",     //<------ Inserir nome do Assinante.
+    "email_assinante": ,      //<------ Inserir email do Assinante.
+    "telefone_assinante": "", //<------ Inserir telefone do Assinante.
+    "rank_assinante": ,       //<------ Inserir Rank do Assinante.
+}
+
+###
+
+//Deletar um produto no sistema
+DELETE http://localhost/assinante/1 HTTP/1.1
+Content-Type: application/json
+//Para realizar a remoção de um Assinante, basta apenas inserir o ID do mesmo ao lado de "/Assinante/1", sendo o 1, onde deverá estar inserido o ID.
